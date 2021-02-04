@@ -1,1 +1,3 @@
-console.log('hello world');
+import { getData } from './components/prueba';
+
+getData()
