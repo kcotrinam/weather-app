@@ -1,12 +1,10 @@
-import getData from './modules/request'
-const apiKey = '90389a28c75f30a2126f4ec7e1c08520'
 
+import searchWeather from './modules/logic'
 
-const showInfo = async () => {
-  const value = await getData(apiKey)
-  console.log(value)
-  console.log(value.main.temp)
-  return value.name
-}
+const formBtn = document.querySelector('button')
 
-showInfo()
+formBtn.addEventListener('click', e => {
+  e.preventDefault();
+  const city = document.querySelector('.city-input').value;
+  if (city) searchWeather(city);
+})
