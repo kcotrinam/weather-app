@@ -34,13 +34,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Weather {
-  constructor(value) {
-    this.value = value
+  constructor(value, measurement) {
+    this.value = value;
+    this.measurement = measurement;
     this.cityContainer = document.querySelector('.content');
   }
 
   transformTemp (temp) {
-    return Math.round(temp - 273.15)
+    switch (this.measurement) {
+      case 'fahrenheit':
+        return Math.round(temp - 273.15) * 9 / 5 + 32;
+      case 'celsius':
+        return Math.round(temp - 273.15);
+      default:
+        return temp
+    }
   }
 
   get populateContainers () {
@@ -64,18 +72,19 @@ class Weather {
   }
 }
 
-const searchWeather = async (city) => {
+const searchWeather = async (city, measurement) => {
   const value = await (0,_request__WEBPACK_IMPORTED_MODULE_0__.default)(city)
-  
-  const w = new Weather(value);
-  w.render();
+  const weather = new Weather(value, measurement);
+  weather.render();
 }
 
 const displayInfo = (ev) => {
   ev.preventDefault()
   const form = document.querySelector('form')
   const city = document.querySelector('.city-input').value;
-  if (city) searchWeather(city);
+  const measurement = document.querySelector('#measurement').value
+  
+  if (city) searchWeather(city, measurement);
   form.reset()
 }
 
