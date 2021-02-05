@@ -1,37 +1,41 @@
 import getData from './request'
 
 class Weather {
-  constructor() {
-    this.cityContainer = document.querySelector('.content .city');
-    this.tempContainer = document.querySelector('.content .temp');
-    this.minTempContainer = document.querySelector('.content .mintemp');
-    this.maxTempContainer = document.querySelector('.content .maxtemp');
+  constructor(value) {
+    this.value = value
+    this.cityContainer = document.querySelector('.content');
   }
 
   transformTemp (temp) {
     return Math.round(temp - 273.15)
   }
 
-  populateContainers (city, temperature, minTemperature, maxTemperature) {
-    this.cityContainer.innerHTML = `City: ${city}`;
-    this.tempContainer.innerHTML = `Temperature: ${temperature} °C`;
-    this.minTempContainer.innerHTML = `Temperature minimum: ${minTemperature} °C`;
-    this.maxTempContainer.innerHTML = `Temperature maximum: ${maxTemperature} °C`;
+  get populateContainers () {
+    this.cityContainer.innerHTML = ''
+    const temp = this.transformTemp(this.value.main.temp)
+    const mintemp = this.transformTemp(this.value.main.temp_min)
+    const maxtemp = this.transformTemp(this.value.main.temp_max)
+    const card =`
+                  <div class="card">
+                    <h1 class="card__city">${this.value.name}</h1>
+                    <h2 class="card__temperature">Temperature: ${temp} °C</h2>
+                    <p class="card__min-temperature">Temperature minimum: ${mintemp} °C</p>
+                    <p class="card__max-temperature">Temperature maximum: ${maxtemp} °C</p>
+                  </div>
+                `
+    return card
   }
 
-  render (city, temp, minTemp, maxTemp) {
-    const tmp = this.transformTemp(temp);
-    const mTemp = this.transformTemp(minTemp);
-    const mxTemp = this.transformTemp(maxTemp);
-    this.populateContainers(city, tmp, mTemp, mxTemp);
+  render () {
+    this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers)
   }
 }
 
 const searchWeather = async (city) => {
   const value = await getData(city)
   
-  const w = new Weather();
-  w.render(value.name, value.main.temp, value.main.temp_min, value.main.temp_max);
+  const w = new Weather(value);
+  w.render();
 }
 
 const displayInfo = (ev) => {
@@ -40,7 +44,6 @@ const displayInfo = (ev) => {
   const city = document.querySelector('.city-input').value;
   if (city) searchWeather(city);
   form.reset()
-
 }
 
 export default displayInfo;
