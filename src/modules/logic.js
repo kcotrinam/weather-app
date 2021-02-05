@@ -20,6 +20,7 @@ class Weather {
 
   get populateContainers () {
     this.cityContainer.innerHTML = ''
+    console.log()
     const temp = this.transformTemp(this.value.main.temp)
     const mintemp = this.transformTemp(this.value.main.temp_min)
     const maxtemp = this.transformTemp(this.value.main.temp_max)
@@ -28,6 +29,7 @@ class Weather {
                     <h1 class="card__city">${this.value.name}</h1>
                     <h2 class="card__temperature">Temperature: ${temp} °C</h2>
                     <p class="card__min-temperature">Temperature minimum: ${mintemp} °C</p>
+                    <img src= "http://openweathermap.org/img/w/${this.value.weather[0].icon}.png" alt="${this.value.weather[0].description}"/>
                     <p class="card__max-temperature">Temperature maximum: ${maxtemp} °C</p>
                   </div>
                 `
