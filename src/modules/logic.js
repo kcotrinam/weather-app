@@ -9,14 +9,14 @@ class Weather {
   }
 
   transformTemp (temp) {
-    return temp - 273.15
+    return Math.round(temp - 273.15)
   }
 
   populateContainers (city, temperature, minTemperature, maxTemperature) {
     this.cityContainer.innerHTML = `City: ${city}`;
-    this.tempContainer.innerHTML = `Temperature: ${temperature}`;
-    this.minTempContainer.innerHTML = `Temperature minimum: ${minTemperature}`;
-    this.maxTempContainer.innerHTML = `Temperature maximum: ${maxTemperature}`;
+    this.tempContainer.innerHTML = `Temperature: ${temperature} °C`;
+    this.minTempContainer.innerHTML = `Temperature minimum: ${minTemperature} °C`;
+    this.maxTempContainer.innerHTML = `Temperature maximum: ${maxTemperature} °C`;
   }
 
   render (city, temp, minTemp, maxTemp) {
@@ -25,18 +25,7 @@ class Weather {
     const mxTemp = this.transformTemp(maxTemp);
     this.populateContainers(city, tmp, mTemp, mxTemp);
   }
-
 }
-
-
-// const showInfo = async () => {
-//   const value = await getData('arequipa')
-//   console.log(value.name)
-//   // const icon =  `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${value.[0]["icon"]}`
-//   return value.name
-// }
-
-// // showInfo()
 
 const searchWeather = async (city) => {
   const value = await getData(city)
@@ -45,4 +34,13 @@ const searchWeather = async (city) => {
   w.render(value.name, value.main.temp, value.main.temp_min, value.main.temp_max);
 }
 
-export default searchWeather;
+const displayInfo = (ev) => {
+  ev.preventDefault()
+  const form = document.querySelector('form')
+  const city = document.querySelector('.city-input').value;
+  if (city) searchWeather(city);
+  form.reset()
+
+}
+
+export default displayInfo;
