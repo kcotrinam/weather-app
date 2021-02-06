@@ -1,3 +1,5 @@
+/* eslint-disable new-cap */
+
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
