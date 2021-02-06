@@ -1,0 +1,67 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  color: #fff;
+  padding: 0.75rem;
+  
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__city {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 0.75rem;
+  }
+
+  &__info {
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto; 
+  }
+
+  &__temperature {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: bolder;
+  }
+
+  &__info-right {
+    padding: 0.75rem;
+    display: grid;
+    grid-template-rows: repeat (4, 1fr);
+    row-gap: 0.5rem;
+
+    // & *+* {
+    //   margin-top: 0.25rem;
+    // }
+    
+    & div {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 0.5rem;
+    }
+
+    & p {
+      font-weight: bold;
+    }
+
+    & span {
+      font-size: 1.5rem;
+      margin-left: 0.75rem;
+    }
+  }
+
+  &__temperature {
+    font-size: 4rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    border-right: 2px solid #fff;
+  }
+}
