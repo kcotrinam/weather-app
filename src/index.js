@@ -1,7 +1,7 @@
-import displayInfo from './modules/logic'
-import './scss/styles.scss'
+import displayInfo from './modules/logic';
+import './scss/styles.scss';
 
 
-const formBtn = document.querySelector('button')
+const formBtn = document.querySelector('button');
 
-formBtn.addEventListener('click', e => displayInfo(e))
+formBtn.addEventListener('click', e => displayInfo(e));

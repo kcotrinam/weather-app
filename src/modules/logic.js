@@ -1,5 +1,5 @@
-import getData from './request'
-import bgImage from './../img/bg.jpg';
+import getData from './request';
+import bgImage from '../img/bg.jpg';
 
 class Weather {
   constructor(value, measurement) {
@@ -8,24 +8,24 @@ class Weather {
     this.cityContainer = document.querySelector('.content');
   }
 
-  transformTemp (temp) {
+  transformTemp(temp) {
     switch (this.measurement) {
       case 'fahrenheit':
-        return `${Math.round(temp - 273.15) * 9 / 5 + 32} °F`;
+        return `${Math.round(temp - 273.15) * (9 / 5) + 32} °F`;
       case 'celsius':
         return `${Math.round(temp - 273.15)} °C`;
       default:
-        return `${temp} °K`
+        return `${temp} °K`;
     }
   }
 
-  get populateContainers () {
-    this.cityContainer.innerHTML = ''
-    const temp = this.transformTemp(this.value.main.temp)
-    const mintemp = this.transformTemp(this.value.main.temp_min)
-    const maxtemp = this.transformTemp(this.value.main.temp_max)
-    const feelsLike = this.transformTemp(this.value.main.feels_like)
-    const card =`
+  get populateContainers() {
+    this.cityContainer.innerHTML = '';
+    const temp = this.transformTemp(this.value.main.temp);
+    const mintemp = this.transformTemp(this.value.main.temp_min);
+    const maxtemp = this.transformTemp(this.value.main.temp_max);
+    const feelsLike = this.transformTemp(this.value.main.feels_like);
+    const card = `
                   <div class="card">
                     <div class="card__description">
                       <p>
@@ -59,32 +59,32 @@ class Weather {
                       </div>
                     </div>
                   </div>
-                `
-    return card
+                `;
+    return card;
   }
 
-  render () {
-    this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers)
+  render() {
+    this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers);
   }
 }
 
 const searchWeather = async (city, measurement) => {
-  const value = await getData(city)
+  const value = await getData(city);
   const weather = new Weather(value, measurement);
   weather.render();
-}
+};
 
 const displayInfo = (ev) => {
-  ev.preventDefault()
-  const form = document.querySelector('form')
+  ev.preventDefault();
+  const form = document.querySelector('form');
   const city = document.querySelector('.city-input').value;
-  const measurement = document.querySelector('#measurement').value
-  
-  if (city) searchWeather(city, measurement);
-  form.reset()
-}
+  const measurement = document.querySelector('#measurement').value;
 
-const main = document.querySelector('.main')
-main.style.backgroundImage = `url(${bgImage})`
+  if (city) searchWeather(city, measurement);
+  form.reset();
+};
+
+const main = document.querySelector('.main');
+main.style.backgroundImage = `url(${bgImage})`;
 
 export default displayInfo;

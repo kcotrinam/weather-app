@@ -8,7 +8,7 @@
 .card {
   color: #fff;
   padding: 0.75rem;
-  
+
   &__description {
     display: flex;
     align-items: center;
@@ -24,20 +24,22 @@
   &__info {
     padding: 1.25rem;
     display: grid;
-    grid-template-columns: 1fr auto; 
+    grid-template-columns: 1fr auto;
   }
 
   &__temperature {
     display: flex;
     align-items: center;
-    font-size: 3.5rem;
     font-weight: bolder;
+    font-size: 4rem;
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    border-right: 2px solid #fff;
   }
 
   &__info-right {
     padding: 0.75rem;
     display: grid;
-    grid-template-rows: repeat (4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     row-gap: 0.5rem;
 
     & div {
@@ -55,11 +57,5 @@
       margin-left: 0.75rem;
       font-weight: bolder;
     }
-  }
-
-  &__temperature {
-    font-size: 4rem;
-    padding: 0.75rem 0.75rem 0.75rem 0;
-    border-right: 2px solid #fff;
   }
 }

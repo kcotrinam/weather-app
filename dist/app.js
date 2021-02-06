@@ -41,9 +41,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const formBtn = document.querySelector('button')
+const formBtn = document.querySelector('button');
 
-formBtn.addEventListener('click', e => (0,_modules_logic__WEBPACK_IMPORTED_MODULE_0__.default)(e))
+formBtn.addEventListener('click', e => (0,_modules_logic__WEBPACK_IMPORTED_MODULE_0__.default)(e));
 
 
 /***/ }),
@@ -59,7 +59,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _request__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./request */ "./src/modules/request.js");
-/* harmony import */ var _img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../img/bg.jpg */ "./src/img/bg.jpg");
+/* harmony import */ var _img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/bg.jpg */ "./src/img/bg.jpg");
 
 
 
@@ -70,24 +70,24 @@ class Weather {
     this.cityContainer = document.querySelector('.content');
   }
 
-  transformTemp (temp) {
+  transformTemp(temp) {
     switch (this.measurement) {
       case 'fahrenheit':
-        return `${Math.round(temp - 273.15) * 9 / 5 + 32} °F`;
+        return `${Math.round(temp - 273.15) * (9 / 5) + 32} °F`;
       case 'celsius':
         return `${Math.round(temp - 273.15)} °C`;
       default:
-        return `${temp} °K`
+        return `${temp} °K`;
     }
   }
 
-  get populateContainers () {
-    this.cityContainer.innerHTML = ''
-    const temp = this.transformTemp(this.value.main.temp)
-    const mintemp = this.transformTemp(this.value.main.temp_min)
-    const maxtemp = this.transformTemp(this.value.main.temp_max)
-    const feelsLike = this.transformTemp(this.value.main.feels_like)
-    const card =`
+  get populateContainers() {
+    this.cityContainer.innerHTML = '';
+    const temp = this.transformTemp(this.value.main.temp);
+    const mintemp = this.transformTemp(this.value.main.temp_min);
+    const maxtemp = this.transformTemp(this.value.main.temp_max);
+    const feelsLike = this.transformTemp(this.value.main.feels_like);
+    const card = `
                   <div class="card">
                     <div class="card__description">
                       <p>
@@ -121,33 +121,33 @@ class Weather {
                       </div>
                     </div>
                   </div>
-                `
-    return card
+                `;
+    return card;
   }
 
-  render () {
-    this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers)
+  render() {
+    this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers);
   }
 }
 
 const searchWeather = async (city, measurement) => {
-  const value = await (0,_request__WEBPACK_IMPORTED_MODULE_0__.default)(city)
+  const value = await (0,_request__WEBPACK_IMPORTED_MODULE_0__.default)(city);
   const weather = new Weather(value, measurement);
   weather.render();
-}
+};
 
 const displayInfo = (ev) => {
-  ev.preventDefault()
-  const form = document.querySelector('form')
+  ev.preventDefault();
+  const form = document.querySelector('form');
   const city = document.querySelector('.city-input').value;
-  const measurement = document.querySelector('#measurement').value
-  
-  if (city) searchWeather(city, measurement);
-  form.reset()
-}
+  const measurement = document.querySelector('#measurement').value;
 
-const main = document.querySelector('.main')
-main.style.backgroundImage = `url(${_img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`
+  if (city) searchWeather(city, measurement);
+  form.reset();
+};
+
+const main = document.querySelector('.main');
+main.style.backgroundImage = `url(${_img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayInfo);
 
@@ -164,13 +164,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 
-const apiKey = '90389a28c75f30a2126f4ec7e1c08520'
+const apiKey = '90389a28c75f30a2126f4ec7e1c08520';
 
 const getData = async (city) => {
   const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
   const json = response.json();
-  return json
-}
+  return json;
+};
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);

@@ -6,39 +6,39 @@
 .form {
   padding: 1.2rem;
 
-  & *+* {
+  & * + * {
     margin-left: 1.2rem;
   }
-  
+
   &__city {
     background: transparent;
-    border: 1px solid rgb(119,119,119);
+    border: 1px solid rgb(119, 119, 119);
     font-size: 1.2rem;
     color: #fff;
     padding: 0.5rem;
   }
-  
+
   &__measurement {
     color: #fff;
     font-size: 1.2rem;
     font-weight: bold;
   }
-  
+
   & select {
     background: transparent;
     color: #fff;
     padding: 0.5rem;
     font-size: 1.2rem;
   }
-  
+
   & button {
-    background: rgb(119,119,119);
-    border: 1px solid rgb(119,119,119);
+    background: rgb(119, 119, 119);
+    border: 1px solid rgb(119, 119, 119);
     color: #fff;
     padding: 0.5rem 1.2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    border: 0.5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 
     &:hover {

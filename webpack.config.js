@@ -6,14 +6,11 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const sassRules = {
   test: /\.s[ac]ss$/i,
   use: [
-    // Creates `style` nodes from JS strings
     MiniCSSExtractPlugin.loader,
-    // Translates CSS into CommonJS
-    "css-loader",
-    // Compiles Sass to CSS
-    "sass-loader",
+    'css-loader',
+    'sass-loader',
   ],
-}
+};
 
 const imgRules = {
   test: /\.(png|jpe?g|gif)$/i,
@@ -22,7 +19,7 @@ const imgRules = {
     outputPath: 'images',
     name: '[name].[ext]',
   },
-}
+};
 
 module.exports = {
   mode: 'development',
@@ -32,18 +29,18 @@ module.exports = {
     filename: 'app.js',
   },
   module: {
-    rules:[
+    rules: [
       sassRules,
-      imgRules
-    ]
+      imgRules,
+    ],
   },
   plugins: [
     new htmlWebpackPlugin({
       title: 'Weather App',
-      template: './src/index.html'
+      template: './src/index.html',
     }),
     new MiniCSSExtractPlugin({
-      filename: "./css/styles.css",
+      filename: './css/styles.css',
     }),
   ],
   devtool: 'source-map',
