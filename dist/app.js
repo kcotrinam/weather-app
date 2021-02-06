@@ -141,9 +141,9 @@ class Weather {
     return card;
   }
 
-  renderError (error) {
-    this.cityContainer.innerHTML = ''
-    const errorMessage =  `
+  renderError(error) {
+    this.cityContainer.innerHTML = '';
+    const errorMessage = `
                           <div class="error-container">
                             <div class="error">
                               <h1 class="error__message">${error}
@@ -159,7 +159,7 @@ class Weather {
                               <i class="fas fa-fist-raised"></i>
                             </h2>
                           </div>
-                          `
+                          `;
     this.cityContainer.insertAdjacentHTML('afterbegin', errorMessage);
   }
 
@@ -169,14 +169,13 @@ class Weather {
 }
 
 const searchWeather = async (city, measurement) => {
-  
   try {
     const value = await (0,_request__WEBPACK_IMPORTED_MODULE_0__.default)(city);
     const weather = new Weather(value, measurement);
     weather.render();
   } catch (e) {
     const weather = new Weather(undefined, measurement);
-    weather.renderError(e)
+    weather.renderError(e);
   }
 };
 
@@ -213,9 +212,9 @@ const apiKey = '90389a28c75f30a2126f4ec7e1c08520';
 const getData = async (city) => {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
   const json = response.json();
-  
-  if (response.status != 200) {
-    throw Error('City not supported')
+
+  if (response.status !== 200) {
+    throw Error('City not supported');
   } else {
     return json;
   }

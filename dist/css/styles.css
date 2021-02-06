@@ -217,7 +217,7 @@ table {
   width: 50vw; }
 
 .error__img img {
-  object-fit: fit;
+  object-fit: fill;
   width: 100%;
   height: 100%; }
 

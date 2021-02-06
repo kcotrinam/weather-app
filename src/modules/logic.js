@@ -1,6 +1,6 @@
 import getData from './request';
 import bgImage from '../img/bg.jpg';
-import errorImg from '../img/error.jpg'
+import errorImg from '../img/error.jpg';
 
 class Weather {
   constructor(value, measurement) {
@@ -64,9 +64,9 @@ class Weather {
     return card;
   }
 
-  renderError (error) {
-    this.cityContainer.innerHTML = ''
-    const errorMessage =  `
+  renderError(error) {
+    this.cityContainer.innerHTML = '';
+    const errorMessage = `
                           <div class="error-container">
                             <div class="error">
                               <h1 class="error__message">${error}
@@ -82,7 +82,7 @@ class Weather {
                               <i class="fas fa-fist-raised"></i>
                             </h2>
                           </div>
-                          `
+                          `;
     this.cityContainer.insertAdjacentHTML('afterbegin', errorMessage);
   }
 
@@ -92,14 +92,13 @@ class Weather {
 }
 
 const searchWeather = async (city, measurement) => {
-  
   try {
     const value = await getData(city);
     const weather = new Weather(value, measurement);
     weather.render();
   } catch (e) {
     const weather = new Weather(undefined, measurement);
-    weather.renderError(e)
+    weather.renderError(e);
   }
 };
 
