@@ -1,5 +1,6 @@
 import getData from './request';
 import bgImage from '../img/bg.jpg';
+import errorImg from '../img/error.jpg'
 
 class Weather {
   constructor(value, measurement) {
@@ -63,15 +64,43 @@ class Weather {
     return card;
   }
 
+  renderError (error) {
+    this.cityContainer.innerHTML = ''
+    const errorMessage =  `
+                          <div class="error-container">
+                            <div class="error">
+                              <h1 class="error__message">${error}
+                                <span>
+                                  <i class="fas fa-cloud"></i>
+                                </span>  
+                              </h1>
+                              <div class="error__img">
+                                <img src="${errorImg}" alt="What?! meme"/>
+                              </div>
+                            </div>
+                            <h2 class="error__submessage">Will work hard to find the city you searched.
+                              <i class="fas fa-fist-raised"></i>
+                            </h2>
+                          </div>
+                          `
+    this.cityContainer.insertAdjacentHTML('afterbegin', errorMessage);
+  }
+
   render() {
     this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers);
   }
 }
 
 const searchWeather = async (city, measurement) => {
-  const value = await getData(city);
-  const weather = new Weather(value, measurement);
-  weather.render();
+  
+  try {
+    const value = await getData(city);
+    const weather = new Weather(value, measurement);
+    weather.render();
+  } catch (e) {
+    const weather = new Weather(undefined, measurement);
+    weather.renderError(e)
+  }
 };
 
 const displayInfo = (ev) => {
