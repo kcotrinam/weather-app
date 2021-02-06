@@ -6,7 +6,7 @@ const getData = async (city) => {
   const json = response.json();
 
   if (response.status !== 200) {
-    throw Error('City not supported');
+    throw Error('CITY NOT FOUND');
   } else {
     return json;
   }

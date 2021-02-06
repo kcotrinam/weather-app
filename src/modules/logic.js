@@ -64,7 +64,7 @@ class Weather {
     return card;
   }
 
-  renderError(error) {
+  renderError(error, city) {
     this.cityContainer.innerHTML = '';
     const errorMessage = `
                           <div class="error-container">
@@ -78,7 +78,7 @@ class Weather {
                                 <img src="${errorImg}" alt="What?! meme"/>
                               </div>
                             </div>
-                            <h2 class="error__submessage">Will work hard to find the city you searched.
+                            <h2 class="error__submessage">We will work hard to find ${city} city.
                               <i class="fas fa-fist-raised"></i>
                             </h2>
                           </div>
@@ -98,7 +98,7 @@ const searchWeather = async (city, measurement) => {
     weather.render();
   } catch (e) {
     const weather = new Weather(undefined, measurement);
-    weather.renderError(e);
+    weather.renderError(e, city);
   }
 };
 
