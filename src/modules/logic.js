@@ -49,7 +49,6 @@ class Weather {
   }
 
   render () {
-    console.log(this.value)
     this.cityContainer.insertAdjacentHTML('afterbegin', this.populateContainers)
   }
 }

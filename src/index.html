@@ -6,18 +6,20 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="./" class="form">
-      <label >City
-      <input type="text" class="city-input">
-      </label>
-      <label for="measurement">Choose</label>
-      <select name="measurement" id="measurement">
-        <option value="celsius">Celsius</option>
-        <option value="fahrenheit">Fahrenheit</option>
-        <option value="kelvin">Kelvin</option>
-      </select>
-    <button type="submit">Search</button>
-  </form>
+    <div class="form-container">
+      <form action="./" class="form">
+        <label >
+        <input type="text" class="city-input form__city" placeholder="Choose a city">
+        </label>
+        <label for="measurement" class="form__measurement">Measurement</label>
+        <select name="measurement" id="measurement">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <div class="content"></div>
   </body>
 </html>
