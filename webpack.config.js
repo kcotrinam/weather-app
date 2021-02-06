@@ -1,11 +1,13 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+
 
 const sassRules = {
   test: /\.s[ac]ss$/i,
   use: [
     // Creates `style` nodes from JS strings
-    "style-loader",
+    MiniCSSExtractPlugin.loader,
     // Translates CSS into CommonJS
     "css-loader",
     // Compiles Sass to CSS
@@ -39,7 +41,10 @@ module.exports = {
     new htmlWebpackPlugin({
       title: 'Weather App',
       template: './src/index.html'
-    })
+    }),
+    new MiniCSSExtractPlugin({
+      filename: "./css/styles.css",
+    }),
   ],
   devtool: 'source-map',
 };
