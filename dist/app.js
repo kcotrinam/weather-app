@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n.main {\n  display: grid;\n  grid-template-rows: auto 1fr;\n  min-height: 100vh; }\n\n.form-container {\n  display: flex;\n  justify-content: flex-end; }\n\n.form {\n  padding: 1.2rem; }\n  .form * + * {\n    margin-left: 1.2rem; }\n  .form__city {\n    background: transparent;\n    border: 1px solid #777777;\n    font-size: 1.2rem;\n    color: #fff;\n    padding: 0.5rem; }\n  .form__measurement {\n    color: #fff;\n    font-size: 1.2rem;\n    font-weight: bold; }\n  .form select {\n    background: transparent;\n    color: #fff;\n    padding: 0.5rem;\n    font-size: 1.2rem; }\n  .form button {\n    background: #777777;\n    border: 1px solid #777777;\n    color: #fff;\n    padding: 0.5rem 1.2rem;\n    font-size: 1.2rem;\n    font-weight: bold;\n    border: 0.5rem;\n    cursor: pointer; }\n    .form button:hover {\n      background: #646464; }\n\n.content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%; }\n\n.card {\n  color: #fff;\n  padding: 0.75rem; }\n  .card__description {\n    display: flex;\n    align-items: center; }\n  .card__city {\n    font-size: 3rem;\n    font-weight: bold;\n    padding-left: 0.75rem; }\n  .card__info {\n    padding: 1.25rem;\n    display: grid;\n    grid-template-columns: 1fr auto; }\n  .card__temperature {\n    display: flex;\n    align-items: center;\n    font-size: 3.5rem;\n    font-weight: bolder; }\n  .card__info-right {\n    padding: 0.75rem;\n    display: grid;\n    grid-template-rows: repeat 4, 1fr;\n    row-gap: 0.5rem; }\n    .card__info-right div {\n      display: grid;\n      grid-template-columns: 1fr auto;\n      column-gap: 0.5rem; }\n    .card__info-right p {\n      font-weight: bold; }\n    .card__info-right span {\n      font-size: 1.5rem;\n      margin-left: 0.75rem; }\n  .card__temperature {\n    font-size: 4rem;\n    padding: 0.75rem 0.75rem 0.75rem 0;\n    border-right: 2px solid #fff; }\n", "",{"version":3,"sources":["webpack://./src/scss/base/_reset.scss","webpack://./src/scss/layout/_layout.scss","webpack://./src/scss/components/_form.scss","webpack://./src/scss/components/_card.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;EAaC,SAAS;EACT,UAAU;EACV,SAAS;EACT,eAAe;EACf,aAAa;EACb,wBAAwB,EAAA;;AAEzB,gDAAA;AACA;;EAEC,cAAc,EAAA;;AAEf;EACC,cAAc,EAAA;;AAEf;EACC,gBAAgB,EAAA;;AAEjB;EACC,YAAY,EAAA;;AAEb;;EAEC,WAAW;EACX,aAAa,EAAA;;AAEd;EACC,yBAAyB;EACzB,iBAAiB,EAAA;;ACzClB;EACE,aAAa;EACb,4BAA4B;EAC5B,iBAAiB,EAAA;;ACHnB;EACE,aAAa;EACb,yBAAyB,EAAA;;AAG3B;EACE,eAAe,EAAA;EADjB;IAII,mBAAmB,EAAA;EAGrB;IACE,uBAAuB;IACvB,yBAAkC;IAClC,iBAAiB;IACjB,WAAW;IACX,eAAe,EAAA;EAGjB;IACE,WAAW;IACX,iBAAiB;IACjB,iBAAiB,EAAA;EAlBrB;IAsBI,uBAAuB;IACvB,WAAW;IACX,eAAe;IACf,iBAAiB,EAAA;EAzBrB;IA6BI,mBAA4B;IAC5B,yBAAkC;IAClC,WAAW;IACX,sBAAsB;IACtB,iBAAiB;IACjB,iBAAiB;IACjB,cAAc;IACd,eAAe,EAAA;IApCnB;MAuCM,mBAA8B,EAAA;;AC5CpC;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,YAAY,EAAA;;AAGd;EACE,WAAW;EACX,gBAAgB,EAAA;EAEhB;IACE,aAAa;IACb,mBAAmB,EAAA;EAGrB;IACE,eAAe;IACf,iBAAiB;IACjB,qBAAqB,EAAA;EAGvB;IACE,gBAAgB;IAChB,aAAa;IACb,+BAA+B,EAAA;EAGjC;IACE,aAAa;IACb,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB,EAAA;EAGrB;IACE,gBAAgB;IAChB,aAAa;IACb,iCAAkC;IAClC,eAAe,EAAA;IAJhB;MAWG,aAAa;MACb,+BAA+B;MAC/B,kBAAkB,EAAA;IAbrB;MAiBG,iBAAiB,EAAA;IAjBpB;MAqBG,iBAAiB;MACjB,oBAAoB,EAAA;EAIxB;IACE,eAAe;IACf,kCAAkC;IAClC,4BAA4B,EAAA","sourcesContent":["html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n",".main {\n  display: grid;\n  grid-template-rows: auto 1fr;\n  min-height: 100vh;\n}",".form-container {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.form {\n  padding: 1.2rem;\n\n  & *+* {\n    margin-left: 1.2rem;\n  }\n  \n  &__city {\n    background: transparent;\n    border: 1px solid rgb(119,119,119);\n    font-size: 1.2rem;\n    color: #fff;\n    padding: 0.5rem;\n  }\n  \n  &__measurement {\n    color: #fff;\n    font-size: 1.2rem;\n    font-weight: bold;\n  }\n  \n  & select {\n    background: transparent;\n    color: #fff;\n    padding: 0.5rem;\n    font-size: 1.2rem;\n  }\n  \n  & button {\n    background: rgb(119,119,119);\n    border: 1px solid rgb(119,119,119);\n    color: #fff;\n    padding: 0.5rem 1.2rem;\n    font-size: 1.2rem;\n    font-weight: bold;\n    border: 0.5rem;\n    cursor: pointer;\n\n    &:hover {\n      background: rgb(100, 100, 100);\n    }\n  }\n}",".content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n\n.card {\n  color: #fff;\n  padding: 0.75rem;\n  \n  &__description {\n    display: flex;\n    align-items: center;\n  }\n\n  &__city {\n    font-size: 3rem;\n    font-weight: bold;\n    padding-left: 0.75rem;\n  }\n\n  &__info {\n    padding: 1.25rem;\n    display: grid;\n    grid-template-columns: 1fr auto; \n  }\n\n  &__temperature {\n    display: flex;\n    align-items: center;\n    font-size: 3.5rem;\n    font-weight: bolder;\n  }\n\n  &__info-right {\n    padding: 0.75rem;\n    display: grid;\n    grid-template-rows: repeat (4, 1fr);\n    row-gap: 0.5rem;\n\n    // & *+* {\n    //   margin-top: 0.25rem;\n    // }\n    \n    & div {\n      display: grid;\n      grid-template-columns: 1fr auto;\n      column-gap: 0.5rem;\n    }\n\n    & p {\n      font-weight: bold;\n    }\n\n    & span {\n      font-size: 1.5rem;\n      margin-left: 0.75rem;\n    }\n  }\n\n  &__temperature {\n    font-size: 4rem;\n    padding: 0.75rem 0.75rem 0.75rem 0;\n    border-right: 2px solid #fff;\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n.main {\n  display: grid;\n  grid-template-rows: auto 1fr;\n  min-height: 100vh;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center; }\n\n.form-container {\n  display: flex;\n  justify-content: flex-end; }\n\n.form {\n  padding: 1.2rem; }\n  .form * + * {\n    margin-left: 1.2rem; }\n  .form__city {\n    background: transparent;\n    border: 1px solid #777777;\n    font-size: 1.2rem;\n    color: #fff;\n    padding: 0.5rem; }\n  .form__measurement {\n    color: #fff;\n    font-size: 1.2rem;\n    font-weight: bold; }\n  .form select {\n    background: transparent;\n    color: #fff;\n    padding: 0.5rem;\n    font-size: 1.2rem; }\n  .form button {\n    background: #777777;\n    border: 1px solid #777777;\n    color: #fff;\n    padding: 0.5rem 1.2rem;\n    font-size: 1.2rem;\n    font-weight: bold;\n    border: 0.5rem;\n    cursor: pointer; }\n    .form button:hover {\n      background: #646464; }\n\n.content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%; }\n\n.card {\n  color: #fff;\n  padding: 0.75rem; }\n  .card__description {\n    display: flex;\n    align-items: center;\n    font-weight: bold; }\n  .card__city {\n    font-size: 3rem;\n    font-weight: bold;\n    padding-left: 0.75rem; }\n  .card__info {\n    padding: 1.25rem;\n    display: grid;\n    grid-template-columns: 1fr auto; }\n  .card__temperature {\n    display: flex;\n    align-items: center;\n    font-size: 3.5rem;\n    font-weight: bolder; }\n  .card__info-right {\n    padding: 0.75rem;\n    display: grid;\n    grid-template-rows: repeat 4, 1fr;\n    row-gap: 0.5rem; }\n    .card__info-right div {\n      display: grid;\n      grid-template-columns: 1fr auto;\n      column-gap: 0.5rem; }\n    .card__info-right p {\n      font-weight: bold; }\n    .card__info-right span {\n      font-size: 1.5rem;\n      margin-left: 0.75rem;\n      font-weight: bolder; }\n  .card__temperature {\n    font-size: 4rem;\n    padding: 0.75rem 0.75rem 0.75rem 0;\n    border-right: 2px solid #fff; }\n", "",{"version":3,"sources":["webpack://./src/scss/base/_reset.scss","webpack://./src/scss/layout/_layout.scss","webpack://./src/scss/components/_form.scss","webpack://./src/scss/components/_card.scss"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;EAaC,SAAS;EACT,UAAU;EACV,SAAS;EACT,eAAe;EACf,aAAa;EACb,wBAAwB,EAAA;;AAEzB,gDAAA;AACA;;EAEC,cAAc,EAAA;;AAEf;EACC,cAAc,EAAA;;AAEf;EACC,gBAAgB,EAAA;;AAEjB;EACC,YAAY,EAAA;;AAEb;;EAEC,WAAW;EACX,aAAa,EAAA;;AAEd;EACC,yBAAyB;EACzB,iBAAiB,EAAA;;ACzClB;EACE,aAAa;EACb,4BAA4B;EAC5B,iBAAiB;EACjB,4BAA4B;EAC5B,sBAAsB;EACtB,2BAA2B,EAAA;;ACN7B;EACE,aAAa;EACb,yBAAyB,EAAA;;AAG3B;EACE,eAAe,EAAA;EADjB;IAII,mBAAmB,EAAA;EAGrB;IACE,uBAAuB;IACvB,yBAAkC;IAClC,iBAAiB;IACjB,WAAW;IACX,eAAe,EAAA;EAGjB;IACE,WAAW;IACX,iBAAiB;IACjB,iBAAiB,EAAA;EAlBrB;IAsBI,uBAAuB;IACvB,WAAW;IACX,eAAe;IACf,iBAAiB,EAAA;EAzBrB;IA6BI,mBAA4B;IAC5B,yBAAkC;IAClC,WAAW;IACX,sBAAsB;IACtB,iBAAiB;IACjB,iBAAiB;IACjB,cAAc;IACd,eAAe,EAAA;IApCnB;MAuCM,mBAA8B,EAAA;;AC5CpC;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,YAAY,EAAA;;AAGd;EACE,WAAW;EACX,gBAAgB,EAAA;EAEhB;IACE,aAAa;IACb,mBAAmB;IACnB,iBAAiB,EAAA;EAGnB;IACE,eAAe;IACf,iBAAiB;IACjB,qBAAqB,EAAA;EAGvB;IACE,gBAAgB;IAChB,aAAa;IACb,+BAA+B,EAAA;EAGjC;IACE,aAAa;IACb,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB,EAAA;EAGrB;IACE,gBAAgB;IAChB,aAAa;IACb,iCAAkC;IAClC,eAAe,EAAA;IAJhB;MAOG,aAAa;MACb,+BAA+B;MAC/B,kBAAkB,EAAA;IATrB;MAaG,iBAAiB,EAAA;IAbpB;MAiBG,iBAAiB;MACjB,oBAAoB;MACpB,mBAAmB,EAAA;EAIvB;IACE,eAAe;IACf,kCAAkC;IAClC,4BAA4B,EAAA","sourcesContent":["html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed, \nfigure, figcaption, footer, header, hgroup, \nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n\tmargin: 0;\n\tpadding: 0;\n\tborder: 0;\n\tfont-size: 100%;\n\tfont: inherit;\n\tvertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure, \nfooter, header, hgroup, menu, nav, section {\n\tdisplay: block;\n}\nbody {\n\tline-height: 1;\n}\nol, ul {\n\tlist-style: none;\n}\nblockquote, q {\n\tquotes: none;\n}\nblockquote:before, blockquote:after,\nq:before, q:after {\n\tcontent: '';\n\tcontent: none;\n}\ntable {\n\tborder-collapse: collapse;\n\tborder-spacing: 0;\n}\n",".main {\n  display: grid;\n  grid-template-rows: auto 1fr;\n  min-height: 100vh;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-position: center;\n}",".form-container {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.form {\n  padding: 1.2rem;\n\n  & *+* {\n    margin-left: 1.2rem;\n  }\n  \n  &__city {\n    background: transparent;\n    border: 1px solid rgb(119,119,119);\n    font-size: 1.2rem;\n    color: #fff;\n    padding: 0.5rem;\n  }\n  \n  &__measurement {\n    color: #fff;\n    font-size: 1.2rem;\n    font-weight: bold;\n  }\n  \n  & select {\n    background: transparent;\n    color: #fff;\n    padding: 0.5rem;\n    font-size: 1.2rem;\n  }\n  \n  & button {\n    background: rgb(119,119,119);\n    border: 1px solid rgb(119,119,119);\n    color: #fff;\n    padding: 0.5rem 1.2rem;\n    font-size: 1.2rem;\n    font-weight: bold;\n    border: 0.5rem;\n    cursor: pointer;\n\n    &:hover {\n      background: rgb(100, 100, 100);\n    }\n  }\n}",".content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n\n.card {\n  color: #fff;\n  padding: 0.75rem;\n  \n  &__description {\n    display: flex;\n    align-items: center;\n    font-weight: bold;\n  }\n\n  &__city {\n    font-size: 3rem;\n    font-weight: bold;\n    padding-left: 0.75rem;\n  }\n\n  &__info {\n    padding: 1.25rem;\n    display: grid;\n    grid-template-columns: 1fr auto; \n  }\n\n  &__temperature {\n    display: flex;\n    align-items: center;\n    font-size: 3.5rem;\n    font-weight: bolder;\n  }\n\n  &__info-right {\n    padding: 0.75rem;\n    display: grid;\n    grid-template-rows: repeat (4, 1fr);\n    row-gap: 0.5rem;\n\n    & div {\n      display: grid;\n      grid-template-columns: 1fr auto;\n      column-gap: 0.5rem;\n    }\n\n    & p {\n      font-weight: bold;\n    }\n\n    & span {\n      font-size: 1.5rem;\n      margin-left: 0.75rem;\n      font-weight: bolder;\n    }\n  }\n\n  &__temperature {\n    font-size: 4rem;\n    padding: 0.75rem 0.75rem 0.75rem 0;\n    border-right: 2px solid #fff;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -141,6 +141,20 @@ module.exports = function cssWithMappingToString(item) {
 
   return [content].join('\n');
 };
+
+/***/ }),
+
+/***/ "./src/img/bg.jpg":
+/*!************************!*\
+  !*** ./src/img/bg.jpg ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/bg.jpg");
 
 /***/ }),
 
@@ -463,6 +477,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const formBtn = document.querySelector('button')
 
 formBtn.addEventListener('click', e => (0,_modules_logic__WEBPACK_IMPORTED_MODULE_0__.default)(e))
@@ -481,6 +496,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _request__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./request */ "./src/modules/request.js");
+/* harmony import */ var _img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../img/bg.jpg */ "./src/img/bg.jpg");
+
 
 
 class Weather {
@@ -566,6 +583,9 @@ const displayInfo = (ev) => {
   form.reset()
 }
 
+const main = document.querySelector('.main')
+main.style.backgroundImage = `url(${_img_bg_jpg__WEBPACK_IMPORTED_MODULE_1__.default})`
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayInfo);
 
 /***/ }),
@@ -644,6 +664,18 @@ const getData = async (city) => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -658,6 +690,26 @@ const getData = async (city) => {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

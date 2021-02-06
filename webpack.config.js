@@ -13,6 +13,15 @@ const sassRules = {
   ],
 }
 
+const imgRules = {
+  test: /\.(png|jpe?g|gif)$/i,
+  loader: 'file-loader',
+  options: {
+    outputPath: 'images',
+    name: '[name].[ext]',
+  },
+}
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -21,7 +30,10 @@ module.exports = {
     filename: 'app.js',
   },
   module: {
-    rules:[sassRules]
+    rules:[
+      sassRules,
+      imgRules
+    ]
   },
   plugins: [
     new htmlWebpackPlugin({

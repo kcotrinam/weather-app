@@ -1,4 +1,5 @@
 import getData from './request'
+import bgImage from './../img/bg.jpg';
 
 class Weather {
   constructor(value, measurement) {
@@ -82,5 +83,8 @@ const displayInfo = (ev) => {
   if (city) searchWeather(city, measurement);
   form.reset()
 }
+
+const main = document.querySelector('.main')
+main.style.backgroundImage = `url(${bgImage})`
 
 export default displayInfo;
