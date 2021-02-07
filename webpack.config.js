@@ -3,6 +3,10 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config( {
+  path: path.join(__dirname, '.env')
+} );
 
 
 const sassRules = {
@@ -37,6 +41,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(dotenv.parsed),
+    }),
     new htmlWebpackPlugin({
       title: 'Weather App',
       template: './src/index.html',
@@ -44,6 +51,7 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: './css/styles.css',
     }),
+
   ],
   devtool: 'source-map',
 };

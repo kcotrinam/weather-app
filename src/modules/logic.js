@@ -35,7 +35,7 @@ class Weather {
                       <img src= "http://openweathermap.org/img/w/${this.value.weather[0].icon}.png" alt="${this.value.weather[0].description}"/>
                     </div>
                     <h1 class="card__city">
-                      ${this.value.name}
+                      ${this.value.name}, 
                       <span>${this.value.sys.country}</span>
                     </h1>
                     <div class="card__info">
